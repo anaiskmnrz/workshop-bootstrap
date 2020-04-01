@@ -4,7 +4,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-		<link rel="stylesheet" href="../style.css"> 
+		<link rel="stylesheet" href="../style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title>Exemple d'utilisation de Bootstrap</title> <!-- Ce titre s'affiche dans l'onglet du navigateur -->
 	</head>
 	<body> 	<!-- Corps de la page -->
@@ -58,34 +59,81 @@
 					<a class="carousel-control-prev" href="#idCarousel" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
 					<a class="carousel-control-next" href="#idCarousel" data-slide="next"><span class="carousel-control-next-icon"></span></a>
 				</div>
-				</div>
+			</div>
 				<!-- Fin Carousel -->
 				<!-- Fin Colonne de gauche -->
 
 				<!-- COLONNE DE DROITE -->
 				<div class="col-sm-4">
-					<div>
-						<form method="post" action="#">
-							<label for="recherche">Rechercher : </label><input type="text" name="recherche" id="recherche" />
-							<input type="submit" name="btrechercher" value="Rechercher">
-						</form>
+					<!-- Formulaire de recherche -->
+					<div class="card m-4">
+						<div class="card-header">
+							<i class="fa fa-search"></i> Rechercher
+						</div>
+						<div class="card-body">
+							<form method="post" action="#">
+								<div class="form-group">
+									<input class="form-control" type="text" name="recherche" id="recherche" />
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn-success form-control">
+										Rechercher
+									</button>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div>
-						<p>Laisser un commentaire :</p>
-						<form method="post" action="#">
-							<label for="pseudo">Pseudo : </label><input type="text" name="pseudo" id="pseudo" />
-							<br/>
-							<label for="message">Message : </label>
-							<textarea name="memo" rows="5" cols="30">Tapez votre message ici</textarea>
-							<input type="submit" name="btEnvoyer" value="Envoyer">
-						</form>
+	
+						<!-- Formulaire de message -->
+					<div class="card m-4">
+						<div class="card-header">
+							<i class="fa fa-comment"></i> Laisser un commentaire : 
+						</div>
+						<div class="card-body">
+							<form method="post" action="#">
+								<div class ="form-group">
+									<label>Pseudo : </label>
+									<input class = "form-control" type="text" name="pseudo" id="pseudo" />
+								</div>
+								<div class="form-group">
+									<label>Message : </label>
+									<textarea class = "form-control" name="memo" rows="5" cols="30">Tapez votre message ici</textarea>
+								</div>
+								<div class="form-group">
+									<button type="button" class="btn-info form-control">
+										Envoyer
+									</button>
+								</div>
+							</form>
+						</div>
 					</div>
-					<div>
-						<p>Très bon tuto, parfait, comme toujours sur ce site Internet au design futuriste. G. MENVU</p>
-						<p>Site très instructif, c'est devenu pour moi une référence en matière de développement Web. Le design est génial. H. CHISMAN</p>
+						<!-- Card derniers commentaires -->
+					<div class="card m-4">
+						<div class="card-header">
+							<i class="fa fa-comment"></i> Derniers 	commentaires 
+						</div>
+						<div class="card-body">
+							<div class = "card m-2">
+								<div class="card-body">
+									<div class="form-group">
+										<label><b>G. MENVU</b></label>
+										<p>Très bon tuto, parfait, comme toujours sur ce site Internet au design futuriste. </p>
+									</div>
+								</div>
+							</div>
+							<div class="card m-2">
+								<div class="card-body">
+									<div class="form-group">
+										<label><b>H. CHISMAN</b></label>
+							
+										<label>Site très instructif, c'est devenu pour moi une référence en matière de développement Web. Le design est génial. </label>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
+					<!-- Fin Colonne de droite -->
 				</div>
-				<!-- Fin Colonne de droite -->
 			</div>
 		</div>
 		<!-- Fin ZONE PRINCIPALE -->
